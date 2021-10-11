@@ -1,0 +1,590 @@
+<style>
+    @import url(./../../assets/home-page-assets/css/bootstrap.min.css);
+    @import url(./../../assets/home-page-assets/css/typography.css);
+    @import url(./../../assets/home-page-assets/css/style.css);
+    @import url(./../../assets/home-page-assets/css/responsive.css);
+
+ .item-container{
+     padding-top: 50px;
+     width: 100vw;
+ }
+
+ .item-container ul li{
+     margin-right: 20px;
+     display: inline-block;
+ }
+
+ .slick-cloned:hover{
+    transform: translateY(-80px);
+ }
+
+ .info-card{
+     top: 5vw;
+     left: 35vw;
+     z-index: 10000;
+     background: #191919;
+     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+     width: 400px;
+     height: 500px;
+     position: fixed;
+     display: block;
+
+ }
+
+ .info-card img{
+     width: 150px;
+ }
+
+.card-image{
+    width: 150px !important;
+}
+
+.info-card h6{
+    text-align: center;
+}
+
+.info-card-info div{
+    width: 100px;
+}
+
+
+.info-card img{
+    display: block;
+    position: relative;
+    margin: auto;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+#cancel{
+    display: block;
+    padding-top: 10px;
+    transform: translate(350px);
+    cursor:pointer;
+}
+
+
+.info-body{
+   transform: translate(130px);
+   display: flex;
+}
+
+.details
+{
+    width: 15ch;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.title{
+    width: 10ch;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.movie-title{
+    width: 10ch;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+
+ul{
+	    list-style: none;
+	}
+
+	img {
+	    -ms-interpolation-mode: bicubic;
+	    vertical-align: middle;
+	    border: 0;
+	}
+
+	.profile-card{
+		width: 300px;
+		border-radius: 2px;
+		overflow: hidden;
+		box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+		position: relative;
+		margin: auto;
+		background: #191919;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.profile-card header{
+		display: block;
+		position: relative;
+		background:#191919 ;
+		text-align: center;
+		padding: 30px 0 20px;
+		z-index: 1;
+		overflow: hidden;
+	}
+
+	.profile-card header:before{
+		content: "";
+		position: absolute;
+		background: url('http://ali.shahab.pk/blur.php?img=http://ali.shahab.pk/ali-shahab.jpg&x=60') no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		
+	}
+
+	.profile-card header:after{
+		content: "";
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	.profile-card header img{
+		border-radius: 100%;
+		overflow: hidden;
+		width: 150px;
+		box-shadow: 0 1px 0 rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.1);
+	}
+
+	.profile-card header h1{
+		font-weight: 200;
+		font-size: 42px;
+		color: white;
+		letter-spacing: -3px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.profile-card header h2{
+		font-weight: 400;
+		font-size: 14px;
+		color: white;
+		letter-spacing: .5px;
+		margin: 0;
+		padding: 0;
+	}
+
+	.profile-card .profile-bio{
+		padding: 0 30px;
+		text-align: center;
+		color: white;
+	}
+
+	.profile-card .profile-social-links{
+		display: table;
+		width: 70%;
+		margin: 20px auto;
+	}
+
+	.profile-card .profile-social-links li{
+		display: table-cell;
+		width: 33.3333333333333333%
+	}
+
+	.profile-card .profile-social-links li a{
+		display: block;
+		text-align: center;
+		padding: 10px;
+		margin: 0 10px;
+		border-radius: 100%;
+		-webkit-transition: box-shadow 0.2s;
+		-moz-transition: box-shadow 0.2s;
+		-o-transition: box-shadow 0.2s;
+		transition: box-shadow 0.2s;
+	}
+	.profile-card .profile-social-links li a:hover{
+		box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+	}
+
+	.profile-card .profile-social-links li a:active{
+		box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
+	}
+
+	.profile-card .profile-social-links li a img{
+		width: 100%;
+		display: block;
+	}
+
+    .user-profiles{
+        display: flex;
+        transform: translateY(200px);
+    }
+
+    .hover-buttons{
+      transform: translate(100px);
+    }
+
+    .main-title{
+       padding-bottom: 30px;
+    }
+
+    .card-image{
+       border-radius: 50%;
+    }
+
+    .info-card-info{
+       transform: translate(-50px);
+    }
+
+    .profile-name{
+  overflow: hidden;
+  white-space: nowrap;
+    }
+
+    .adress{
+      width: 15ch;
+  overflow: hidden;
+  white-space: nowrap;
+    }
+
+    .phone{      
+      width: 15ch;
+  overflow: hidden;
+  white-space: nowrap;
+    }
+
+    .website{      
+      width: 15ch;
+  overflow: hidden;
+  white-space: nowrap;}
+
+  mat-card{
+       background: transparent;
+       color: white;
+    }
+
+ul li{
+   padding-bottom: 20px;
+}
+
+h4{
+   padding-top:50px;
+   padding-bottom: 50px !important;
+   transform: translate(600px) !important;
+    font-size: xx-large;
+}
+</style>
+<html lang="en-US"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Streamit - Responsive Bootstrap 4 Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+ </head>
+ 
+ <body>
+    <div id="loading" style="display: none;">
+       <div id="loading-center">
+       </div>
+    </div>
+    <mat-card>
+    <div *ngIf="ShowInfoCard" class="info-card">
+      <i class="fa fa-times" (click)="ToggleCard()" id="cancel"></i>
+      <img src="./../../assets/images/faces/face2.jpg" class="card-image" alt="">
+      <div class="info-body">
+      <div class="info-card-info">
+      <div>
+      <h2>Name</h2>
+      <p class="title">{{ CurrentDetailsOBJ.name }}</p>
+      </div>
+      <div>
+      <h2>username</h2>
+      <p class="details">{{ CurrentDetailsOBJ.username}}
+      </p>
+      </div>
+      <div>
+         <h2>email</h2>
+         <p class="details">{{ CurrentDetailsOBJ.email}}
+         </p>
+         </div>
+      </div>
+      <div class="info-card-info-2">
+         <div>
+         <h2>Adress</h2>
+         <p class="adress">{{ CurrentDetailsOBJ.address.street}}}</p>
+         </div>
+         <div>
+         <h2>Phone</h2>
+         <p class="phone">{{CurrentDetailsOBJ.phone}}
+         </p>
+         </div>
+         <div>
+            <h2>Website</h2>
+            <p class="website">{{ CurrentDetailsOBJ.website }}
+            </p>
+            </div>
+         </div>
+      </div>
+  </div>
+  </mat-card>
+
+
+    
+    <section class="iq-main-slider p-0">
+       <div id="tvshows-slider" class="slick-initialized slick-slider"><button class="PreArrow slick-arrow" style=""><i class="ri-arrow-left-s-line"></i></button>
+         <mat-grid-list>  
+         <div class="slick-list draggable" style="padding: 0px 200px;"><div class="slick-track" style="opacity: 1; width: 7584px; transform: translate3d(-1896px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-2" aria-hidden="true" tabindex="-1" style="width: 948px;">
+             <a href="movie-details.html" tabindex="-1">
+                <div class="shows-img">
+                   <img src="./../../assets/home-page-assets/images/movie-banner/2.jpg" class="w-100" alt="">
+                   <div class="shows-content">
+                      <h4 class="text-white mb-1">Jumbo Queen</h4>
+                      <div class="movie-time d-flex align-items-center">
+                         <div class="badge badge-secondary p-1 mr-2">9+</div>
+                         <span class="text-white">2h 40m</span>
+                      </div>
+                   </div>
+                </div>
+             </a>
+          </div><div class="slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 948px;">
+             <a href="movie-details.html" tabindex="-1">
+                <div class="shows-img">
+                   <img src="./../../assets/home-page-assets/images/movie-banner/3.jpg" class="w-100" alt="">
+                   <div class="shows-content">
+                      <h4 class="text-white mb-1">The Lost Journey</h4>
+                      <div class="movie-time d-flex align-items-center">
+                         <div class="badge badge-secondary p-1 mr-2">20+</div>
+                         <span class="text-white">2h 15m</span>
+                      </div>
+                   </div>
+                </div>
+             </a>
+          </div><div class="slick-slide slick-current slick-active slick-center" data-slick-index="0" aria-hidden="false" tabindex="0" style="width: 948px;">
+             <a href="movie-details.html" tabindex="0">
+                <div class="shows-img">
+                   <img src="./../../assets/home-page-assets/images/movie-banner/1.jpg" class="w-100" alt="">
+                   <div class="shows-content">
+                      <h4 class="text-white mb-1">Open Dead Shot</h4>
+                      <div class="movie-time d-flex align-items-center">
+                         <div class="badge badge-secondary p-1 mr-2">13+</div>
+                         <span class="text-white">2h 20m</span>
+                      </div>
+                   </div>
+                </div>
+             </a>
+          </div><div class="slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" style="width: 948px;">
+             <a href="movie-details.html" tabindex="-1">
+                <div class="shows-img">
+                   <img src="./../../assets/home-page-assets/images/movie-banner/2.jpg" class="w-100" alt="">
+                   <div class="shows-content">
+                      <h4 class="text-white mb-1">Jumbo Queen</h4>
+                      <div class="movie-time d-flex align-items-center">
+                         <div class="badge badge-secondary p-1 mr-2">9+</div>
+                         <span class="text-white">2h 40m</span>
+                      </div>
+                   </div>
+                </div>
+             </a>
+          </div><div class="slick-slide" data-slick-index="2" aria-hidden="true" tabindex="-1" style="width: 948px;">
+             <a href="movie-details.html" tabindex="-1">
+                <div class="shows-img">
+                   <img src="./../../assets/home-page-assets/images/movie-banner/3.jpg" class="w-100" alt="">
+                   <div class="shows-content">
+                      <h4 class="text-white mb-1">The Lost Journey</h4>
+                      <div class="movie-time d-flex align-items-center">
+                         <div class="badge badge-secondary p-1 mr-2">20+</div>
+                         <span class="text-white">2h 15m</span>
+                      </div>
+                   </div>
+                </div>
+             </a>
+          </div><div class="slick-slide slick-cloned" data-slick-index="3" aria-hidden="true" tabindex="-1" style="width: 948px;">
+             <a href="movie-details.html" tabindex="-1">
+                <div class="shows-img">
+                   <img src="./../../assets/home-page-assets/images/movie-banner/1.jpg" class="w-100" alt="">
+                   <div class="shows-content">
+                      <h4 class="text-white mb-1">Open Dead Shot</h4>
+                      <div class="movie-time d-flex align-items-center">
+                         <div class="badge badge-secondary p-1 mr-2">13+</div>
+                         <span class="text-white">2h 20m</span>
+                      </div>
+                   </div>
+                </div>
+             </a>
+          </div><div class="slick-slide slick-cloned slick-center" data-slick-index="4" aria-hidden="true" tabindex="-1" style="width: 948px;">
+             <a href="movie-details.html" tabindex="-1">
+                <div class="shows-img">
+                   <img src="./../../assets/home-page-assets/images/movie-banner/2.jpg" class="w-100" alt="">
+                   <div class="shows-content">
+                      <h4 class="text-white mb-1">Jumbo Queen</h4>
+                      <div class="movie-time d-flex align-items-center">
+                         <div class="badge badge-secondary p-1 mr-2">9+</div>
+                         <span class="text-white">2h 40m</span>
+                      </div>
+                   </div>
+                </div>
+             </a>
+          </div><div class="slick-slide slick-cloned" data-slick-index="5" aria-hidden="true" tabindex="-1" style="width: 948px;">
+             <a href="movie-details.html" tabindex="-1">
+                <div class="shows-img">
+                   <img src="./../../assets/home-page-assets/images/movie-banner/3.jpg" class="w-100" alt="">
+                   <div class="shows-content">
+                      <h4 class="text-white mb-1">The Lost Journey</h4>
+                      <div class="movie-time d-flex align-items-center">
+                         <div class="badge badge-secondary p-1 mr-2">20+</div>
+                         <span class="text-white">2h 15m</span>
+                      </div>
+                   </div>
+                </div>
+             </a>
+          </div>
+         </div>
+      </div>
+   </mat-grid-list> 
+
+                   
+       <button class="NextArrow slick-arrow" style=""><i class="ri-arrow-right-s-line"></i></button></div>
+       <div class="dropdown genres-box">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Genres
+          </button>
+          <div class="dropdown-menu three-column" aria-labelledby="dropdownMenuButton">
+             <a class="dropdown-item" href="#">Hindi</a>
+             <a class="dropdown-item" href="#">Tamil</a>
+             <a class="dropdown-item" href="#">Punjabi</a>
+             <a class="dropdown-item" href="#">English</a>
+             <a class="dropdown-item" href="#">Comedies</a>
+             <a class="dropdown-item" href="#">Action</a>
+             <a class="dropdown-item" href="#">Romance</a>
+             <a class="dropdown-item" href="#">Dramas</a>
+             <a class="dropdown-item" href="#">Bollywood</a>
+             <a class="dropdown-item" href="#">Hollywood</a>
+             <a class="dropdown-item" href="#">Children &amp; Family</a>
+             <a class="dropdown-item" href="#">Award-Winning</a>
+          </div>
+       </div>
+    </section>
+
+ 
+    <div class="item-container">
+        <div class="iq-main-header d-flex align-items-center justify-content-between">
+            <h4 class="main-title" style="transform: translateX(40vw); ">Users</h4>
+         </div>
+<div class="user-profiles">    
+<mat-grid-list> 
+<ul>
+<mat-card>
+<li *ngFor="let item of UserJSONS.slice(0, 32)"> 
+<aside class="profile-card">
+  
+    <header>
+      
+      <a href="http://ali.shahab.pk">
+        <img src="{{ item.imageurl}}">
+      </a>
+  
+      <h1 class="profile-name">{{ item.name}}</h1>
+      
+      <h2>{{ item.email }}</h2>
+      
+    </header>
+    
+    <div class="profile-bio">
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      
+    </div>
+
+    <div mat-button (click)="GetDetails(item.id)" class="hover-buttons">
+        <span class="btn btn-hover">
+        <i mat-button class="fa fa-info mr-1" aria-hidden="true"></i>
+        Details
+        </span>
+     </div>
+    
+    <ul class="profile-social-links">
+      
+      <li>
+        <a href="https://twitter.com/alishahab">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-twitter.svg">
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://themeforest.net/user/alishahab">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-envato.svg">
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://codepen.io/alishahab">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-codepen.svg">
+        </a>
+      </li>
+      
+      
+    </ul>
+    
+  </aside>
+</li>
+</mat-card>
+</ul>
+</mat-grid-list>
+</div>
+
+    </div>
+    <footer class="mb-0">
+       <div class="container-fluid">
+          <div class="block-space">
+             <div class="row">
+                <div class="col-lg-3 col-md-4">
+                   <ul class="f-link list-unstyled mb-0">
+                      <li><a href="#">About Us</a></li>
+                      <li><a href="movie-category.html">Movies</a></li>
+                      <li><a href="show-category.html">Tv Shows</a></li>
+                      <li><a href="#">Coporate Information</a></li>
+                   </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                   <ul class="f-link list-unstyled mb-0">
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Terms &amp; Conditions</a></li>
+                      <li><a href="#">Help</a></li>
+                   </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                   <ul class="f-link list-unstyled mb-0">
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Cotact Us</a></li>
+                      <li><a href="#">Legal Notice</a></li>
+                   </ul>
+                </div>
+                <div class="col-lg-3 col-md-12 r-mt-15">
+                   <div class="d-flex">
+                      <a href="#" class="s-icon">
+                         <i class="ri-facebook-fill"></i>
+                      </a>
+                      <a href="#" class="s-icon">
+                         <i class="ri-skype-fill"></i>
+                      </a>
+                      <a href="#" class="s-icon">
+                         <i class="ri-linkedin-fill"></i>
+                      </a>
+                      <a href="#" class="s-icon">
+                         <i class="ri-whatsapp-fill"></i>
+                      </a>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="copyright py-2">
+          <div class="container-fluid">
+             <p class="mb-0 text-center font-size-14 text-body">Movie Prototype - 2021 All Rights Reserved</p>
+          </div>
+       </div>
+
+    </footer>
+    <div id="back-to-top" class="show">
+       <a class="top" href="#top" id="top"> <i class="fa fa-angle-up"></i> </a>
+    </div>
+ 
+ 
+ </body></html>
+

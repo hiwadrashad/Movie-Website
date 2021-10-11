@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<style>
+.sidebar{
+   position: fixed;
+   transform: translateY(-2vw);
+   left:  -200px;
+   width: 14vw;
+   height: 110%;
+   background: #191919;
+   border-width: 0;
+   list-style-type: none !important;
+   transition: all .5s ease;
+   }
+
+.sidebar ul{
+   list-style-type: none !important;
+}
+
+.sidebar header{
+   font-size: 2vw;
+   text-align: center;
+   padding-top: 2vw;
+   padding-bottom: 2vw;
+   background: #141414;
+   user-select: none;
+   height: 200px;
+
+}
+
+.sidebar ul a{
+   display: block;
+   padding-top: 1vw;
+   padding-bottom: 1vw;
+   font-size: 15px;
+   padding-left: 2vw;
+   box-sizing: border-box;
+   
+   }
+
+   ul li:hover a {
+      padding-left: 1vw;
+   }
+
+   ul li a i {
+      padding-right: 0.5vw;
+   }
+
+   #check{
+      display: none;
+   }
+
+   label #btn, label #cancel{
+      position: absolute;
+      cursor: pointer;
+
+   }
+
+   label #btn{
+      left: 2vw;
+      top: 2vw;
+      z-index: 999;
+      font-size: 20px;
+      transition: all .5s;
+   }
+
+   label #cancel{
+      z-index: 999;
+      font-size: 20px;
+      left: -10vw;
+      top: 2vw;
+      transition: all .5s ease;
+   }
+
+   #check:checked ~ .sidebar{
+      left: 0;
+   }
+
+   #check:checked ~ label #btn{
+      opacity: 0;
+      pointer-events: none;
+   }
+   #check:checked ~ label #cancel{
+      left: 11vw;
+   }
+   #check:checked ~.inner-container{
+      margin-left: 10vw;
+   }
+   .inner-container{
+      transition: all .5s ease;
+   }
+   .channel-logo { width: 13vw !important; z-index: 999; border-left: 5px solid var(--iq-primary); background: transparent linear-gradient(270deg, rgba(11, 1, 2, 0) 0%, rgba(255, 55, 65, 0.3) 100%); padding: 10px 10px 10px 15px; width: 255px; position: relative; overflow: hidden; }
+
+ .user-info{
+    padding-top: 1vw;
+    font-size: medium;
+ }
+
+ .nav-bar nav ul{
+    z-index: 10;
+   position: fixed !important;
+   list-style-type: none !important;
+ }
+
+ .navbar 
+ {
+   justify-content: space-between;  
+   align-items: center;
+   padding-left: 10%;
+ }
+
+ .nav-links{
+    list-style: none;
+ }
+ .nav-links li{
+    display: inline-block;
+    transform: translate(70vw);
+    padding:10px 20px
+ }
+
+ .nav-links li a{
+    transition: all 0.5s ease;
+ }
+
+ .cta{
+    padding: 6px 20px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    color: white;
+    }
+
+    .cta:hover{
+       background-color:rgba(0,136,169,0.8); 
+    }
+
+    .inner-container{
+       top: -2vw;
+    }
+
+    .mat-badge{
+       transform: translateY(8px);
+    }
+    mat-toolbar{
+       background: #141414;
+    }
+    mat-icon{
+       color: white;
+    }
+
+    mat-sidenav-container{
+       color: white;
+    }
+</style>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Main Page</title>
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <mat-toolbar class="nav-bar">
+      <nav>
+         <ul class="nav-links">
+           <li><mat-icon matBadge="15" class="mat-badge" matBadgeColor="warn">home</mat-icon>
+           </li>
+           <li><a href="#">Info</a></li>
+           <li><a href="#">Contact</a></li>
+           <li><a href="#"><input mat-button class="cta" type="button" value="More"></a></li>
+         </ul>
+      </nav>
+   </mat-toolbar>
+   <input type="checkbox" id="check">
+   <label for="check">
+       <i class="fa fa-bars" id="btn"></i>
+       <i class="fa fa-times" id="cancel"></i>
+
+   </label>
+   <mat-sidenav-container class="sidebar">
+      <header>
+      <img style="background-color: #141414 !important;" src="./../assets/images/faces/face3-modified.png"> 
+      <div class="user-info">
+         Antonio Banderas
+      </div>
+      </header>
+      <div class="lower-sub-body">
+      <a href="javascript:void(0);" tabindex="0">
+         <div class="channel-logo fadeInLeft animated" data-animation-in="fadeInLeft" data-delay-in="0.5" style="opacity: 1; animation-delay: 0.5s;">
+            <img src="./../assets/home-page-assets/images/logo.png" class="c-logo" alt="streamit">
+         </div>
+      </a>
+      <ul>
+         <li><a routerLink=""><i class="fa fa-home"></i> Home </a></li>
+         <li><a routerLink="users"><i class="fa fa-user"></i> Users </a></li>
+         <li><a routerLink="movies"><i class="fa fa-film"></i> Films </a></li>
+      </ul>
+      </div>
+   </mat-sidenav-container>
+   <div class="inner-container">
+       <router-outlet></router-outlet>   
+</div>
+</body>
+</html>
